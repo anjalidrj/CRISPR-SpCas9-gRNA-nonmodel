@@ -1,17 +1,24 @@
 #!/bin/bash
 echo "Setting up CRISPR Guide Design environment..."
 
-# Install mamba if not available
+# Install mamba
 conda install -y -n base -c conda-forge mamba
 
-# Create environment
-mamba env create -f environment.yml
+# Create or update environment
+if conda env list | grep -q "guide-design"; then
+    echo "Environment exists, updating..."
+    mamba env update -f environment.yml --prune
+else
+    echo "Creating environment..."
+    mamba env create -f environment.yml
+fi
 
-# Activate and register Jupyter kernel
+# Activate and install additional packages
 source /opt/conda/etc/profile.d/conda.sh
 conda activate guide-design
+mamba install -n guide-design -y matplotlib seaborn
 python -m ipykernel install --user --name guide-design --display-name "guide-design"
 
 echo ""
 echo "✅ Setup complete!"
-echo "To activate: source /opt/conda/etc/profile.d/conda.sh && conda activate guide-design"
+echo "Run: source /opt/conda/etc/profile.d/conda.sh && conda activate guide-design"
