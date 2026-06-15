@@ -216,3 +216,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# GuideScan2 temporary files
+*.forward.dna
+*.reverse.dna
+
+# GuideScan2 index files
+*.forward
+*.reverse
+*.gs
+
+# Pipeline output files
+results/
+kmers.txt
+guidescan2_output.csv
