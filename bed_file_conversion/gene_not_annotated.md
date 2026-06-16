@@ -4,8 +4,8 @@
 2. Open a blank txt file in notepad.  
 3. Type in the chromosome/sequence name (will be given in the fasta file, or can be found when generating other bed files for the organism).  
 4. Click on tab 
-5. Then type in starting nculeotide number.
-6. Click on tab then type in ending nulceotide number.
+5. Then type in starting nucleotide number.
+6. Click on tab then type in ending nucleotide number.
 7. Click on tab and type in your gene's name.
 8. Click on tab and type 0.
 9. Click on tab and type either + or - depending on whether the sequence is on the top or bottom strand.
