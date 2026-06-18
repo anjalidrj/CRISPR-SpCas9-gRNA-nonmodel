@@ -1,7 +1,7 @@
 #Run one at a time in powershell(windows)
 
 #1
-cd "C:\Users\name\folder_loaction\folder_name" #copy folder containing fasta and gff3 files pathname
+cd "C:\Users\name\folder_loaction\folder_name" # <--- copy folder containing fasta and gff3 files pathname
 
 #2
 # Preview first 3 lines matching "gene_name"
